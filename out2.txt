@@ -1,0 +1,4 @@
+The throughput of FTP is 
+104000.0 bytes per second
+The throughput of Telnet is 
+502.09205020920507 bytes per second
