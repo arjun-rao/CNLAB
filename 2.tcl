@@ -84,9 +84,9 @@ $telnet set type_ Telnet
 #Schedule Events
 $ns at 0.1 "$telnet start"
 $ns at 0.5 "$ftp0 start"
-$ns at 10.0 "$telnet stop"
-$ns at 10.5 "$ftp0 stop"
-$ns at 11.0 "Finish"
+$ns at 23.0 "$telnet stop"
+$ns at 23.5 "$ftp0 stop"
+$ns at 24.0 "Finish"
 
 #Run Simulation
 $ns run
