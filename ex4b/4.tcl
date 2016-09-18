@@ -17,8 +17,8 @@ proc finish {} {
    #Close the trace files
    close $traceFile
    close $namFile
-	 exec awk -f stats.awk 4.tr &
-	 exec nam 4.nam &
+	 #exec awk -f stats.awk 4.tr &
+	 #exec nam 4.nam &
    exit 0
 }
 
@@ -53,7 +53,7 @@ for {set i 1} {$i < 7} {incr i} {
 				$ns attach-agent $n($i) $pingAgent($i)
 }
 for {set i 1} {$i < 6} {incr i} {
-	$ns queue-limit $n(0) $n(6) 2
+	$ns queue-limit $n(0) $n($i) 2
 }
 $ns queue-limit $n(0) $n(6) 1
 
