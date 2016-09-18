@@ -18,7 +18,7 @@ proc finish {} {
    close $traceFile
    close $namFile
 	 #exec awk -f stats.awk 4.tr &
-	 #exec nam 4.nam &
+	 exec nam 4.nam &
    exit 0
 }
 
@@ -31,7 +31,7 @@ for {set i 0} {$i < 7} {incr i} {
 
 
 #Create links between the nodes
-for {set i 0} {$i < 4} {incr i} {
+for {set i 1} {$i < 4} {incr i} {
         $ns duplex-link $n($i) $n(0) 1Mb 10ms DropTail
 }
 
