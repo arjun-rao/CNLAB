@@ -1,0 +1,9 @@
+node 1 received ping answer from  4 with round-trip-time 222.0 ms.
+node 4 received ping answer from  1 with round-trip-time 222.0 ms.
+node 2 received ping answer from  5 with round-trip-time 222.0 ms.
+node 5 received ping answer from  2 with round-trip-time 222.0 ms.
+node 1 received ping answer from  4 with round-trip-time 222.0 ms.
+node 4 received ping answer from  1 with round-trip-time 222.0 ms.
+node 2 received ping answer from  5 with round-trip-time 222.0 ms.
+node 5 received ping answer from  2 with round-trip-time 222.0 ms.
+No of packets dropped : 4
