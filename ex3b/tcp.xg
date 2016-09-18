@@ -1,0 +1,14 @@
+title= packets received vs time 
+title_x= time (secs)
+title_y=  packets
+color = blue
+1	16
+2	21
+3	22
+4	24
+5	29
+6	33
+7	39
+8	66
+9	85
+10 100

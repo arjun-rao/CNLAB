@@ -1,0 +1,13 @@
+title= packets received vs time
+title_x= time (secs)
+title_y= packets
+color = red
+1	50
+2	334
+3	388
+4	392
+5	394
+6	402
+7	404
+8	406
+9	410
