@@ -1,0 +1,13 @@
+title= BandWidth Vs Throughput (ftp)
+title_x= kbps
+title_y= Bps
+color = blue
+100 172293
+200 372320
+300 570266
+400 770293
+500 969280
+600 1166186
+700 1363786
+800 1561386
+900 1759680

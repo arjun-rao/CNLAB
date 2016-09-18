@@ -1,0 +1,14 @@
+title= BandWidth Vs Throughput (telnet)
+title_x= B/w (kbps)
+title_y= Throughput Bps
+color = red
+100 39866
+200 38480
+300 40560
+400 40213
+500 39520
+600 39520
+700 39520
+800 39520
+900 39520
+1000 38826
