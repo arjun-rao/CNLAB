@@ -1,0 +1,15 @@
+title= error_rate vs throughput(CBR)
+title_x= error_rate(%)
+title_y=  throughput (bytes per second)
+color = red
+0.10 69710
+0.09 70128
+0.08 70819
+0.07 71237
+0.06 71623
+0.05 72491
+0.04 72781
+0.03 73118
+0.02 73665
+0.01 74453
+0.00 74678
