@@ -23,7 +23,7 @@ proc finish {}   {
 }
 
 
-#Create 6 nodes
+#Create 7 nodes
 for {set i 0} {$i < 7} {incr i} {
         set n($i) [$ns node]
 }
