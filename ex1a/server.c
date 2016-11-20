@@ -2,6 +2,10 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <fcntl.h> 
 
 #define bufsize 1024
 
@@ -45,11 +49,17 @@ int main(){
   recv(newSocket,fname,255,0);
 
   fd=open(fname,O_RDONLY);
-
-  n=read(fd,buffer,bufsize);
+  if(fd==-1){
+    strcpy(buffer,"No file found!");
+    n = strlen(buffer);    
+  }
+  else{
+    n=read(fd,buffer,bufsize);
+  }
+  
 
   send(newSocket,buffer,n,0);
   
-
-  return 0;
+  close(newSocket);
+  return close(serverSocket);;
 }

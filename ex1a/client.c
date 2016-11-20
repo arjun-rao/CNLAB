@@ -2,6 +2,9 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <string.h>
+#include <unistd.h>
+#include <fcntl.h> 
+#include <arpa/inet.h>
 
 #define bufsize 1024
 
@@ -33,12 +36,12 @@ int main(){
   printf("\nEnter filename: ");scanf("%s",fname);
 
   send(clientSocket,fname,255,0);
-  scanf("");
+  printf("\nResponse:\n");
   /*---- Read the message from the server into the buffer ----*/
   while((recv(clientSocket, buffer, bufsize, 0))>0)
     printf("%s",buffer);
-
+  printf("\n");
    
 
-  return 0;
+  return close(clientSocket);;
 }
