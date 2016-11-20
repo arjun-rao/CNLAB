@@ -10,7 +10,7 @@ typedef unsigned short int word16;  // 16-bit word is a short int
 typedef unsigned int       word32;  // 32-bit word is an int
 
 //----- Globals ---------------------------------------------------------------
-int BUFFER_LEN=4096;      // Length of buffer
+int BUFFER_LEN=4096;      // Length of buffer when using random data
 
 //----- Prototypes ------------------------------------------------------------
 word16 checksum(byte *addr, word32 count,word32 initsum = 0);
