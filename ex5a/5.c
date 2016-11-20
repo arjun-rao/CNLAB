@@ -1,23 +1,29 @@
+//===== To demo data transfer in unreliable network code using CRC (16-bits) Technique.
+
 #include<stdio.h>
 
 #include<string.h>
 
 #define N strlen(g)
  
-char t[28],cs[28],g[]="10001000000100001";
+char t[28];//stores test data
+char cs[28]; //stores crc checksum
+char g[]="10001000000100001"; //generator polynomial
 int a,e,c;
  
-void xor(){
+void xor()
+{
     for(c = 1;c < N; c++)
     cs[c] = (( cs[c] == g[c])?'0':'1');
 }
  
-void crc(){
+void crc()
+{
     for(e=0;e<N;e++)
-        cs[e]=t[e];
+        cs[e]=t[e];  
     do{
         if(cs[0]=='1')
-            xor();
+            xor(); //xor with generator polynomial 
         for(c=0;c<N-1;c++)
             cs[c]=cs[c+1];
         cs[c]=t[e++];
@@ -34,7 +40,7 @@ int main()
     for(e=a;e<a+N-1;e++)
         t[e]='0';
     printf("\n----------------------------------------");
-    printf("\nModified data is : %s",t);
+    printf("\Padded data is : %s",t);
     printf("\n----------------------------------------");
     crc();
     printf("\nChecksum is : %s",cs);

@@ -1,5 +1,5 @@
 #include <iostream> 
-#include <stdio.h>                 // Needed for printf()
+#include <stdio.h>                 // Needed for printf() to get nice hex values
 #include <stdlib.h>                 // Needed for rand()
 
 using namespace std;
@@ -15,7 +15,7 @@ int BUFFER_LEN=4096;      // Length of buffer when using random data
 //----- Prototypes ------------------------------------------------------------
 word16 checksum(byte *addr, word32 count,word32 initsum = 0);
 
-//===== Main program ==========================================================
+//===== Main function ==========================================================
 int main(void)
 {
   byte        buff[BUFFER_LEN]; // Buffer of packet bytes

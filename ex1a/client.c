@@ -3,9 +3,12 @@
 #include <netinet/in.h>
 #include <string.h>
 
+#define bufsize 1024
+
 int main(){
+
   int clientSocket;
-  char buffer[1024];
+  char buffer[1024],fname[255];
   struct sockaddr_in serverAddr;
   socklen_t addr_size;
 
@@ -27,11 +30,15 @@ int main(){
   addr_size = sizeof serverAddr;
   connect(clientSocket, (struct sockaddr *) &serverAddr, addr_size);
 
-  /*---- Read the message from the server into the buffer ----*/
-  recv(clientSocket, buffer, 1024, 0);
+  printf("\nEnter filename: ");scanf("%s",fname);
 
-  /*---- Print the received message ----*/
-  printf("Data received: %s",buffer);   
+  send(clientSocket,fname,255,0);
+  scanf("");
+  /*---- Read the message from the server into the buffer ----*/
+  while((recv(clientSocket, buffer, bufsize, 0))>0)
+    printf("%s",buffer);
+
+   
 
   return 0;
 }
