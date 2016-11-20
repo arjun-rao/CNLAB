@@ -43,5 +43,5 @@ int main(){
   printf("\n");
    
 
-  return close(clientSocket);;
+  return close(clientSocket);
 }
