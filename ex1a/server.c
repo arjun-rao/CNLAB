@@ -61,5 +61,5 @@ int main(){
   send(newSocket,buffer,n,0);
   
   close(newSocket);
-  return close(serverSocket);;
+  return close(serverSocket);
 }
