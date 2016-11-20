@@ -40,7 +40,7 @@ int main()
     for(e=a;e<a+N-1;e++)
         t[e]='0';
     printf("\n----------------------------------------");
-    printf("\Padded data is : %s",t);
+    printf("\nPadded data is : %s",t);
     printf("\n----------------------------------------");
     crc();
     printf("\nChecksum is : %s",cs);
