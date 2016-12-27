@@ -88,7 +88,7 @@ void bford(Graph &G, int src)
 		for(int k=0;k<E;k++)
 		{
 			int u = G.edge[k][0], v = G.edge[k][1];
-			if(dist[v] > dist[u]+G.a[u][v])
+			if(dist[u]!=INT_MAX && dist[v] > dist[u]+G.a[u][v])
 				dist[v] = dist[u]+G.a[u][v];
 		}
 	}
@@ -99,7 +99,7 @@ void bford(Graph &G, int src)
 	for(int k=0;k<E;k++)
 	{
 		int u = G.edge[k][0], v = G.edge[k][1];
-		if(  dist[v] > dist[u]+G.a[u][v])
+		if(dist[u]!=INT_MAX &&  dist[v] > dist[u]+G.a[u][v])
 		{
 			cout<<"\nGraph contains a negative-weight cycle\n";
 			return;
