@@ -14,7 +14,7 @@ BEGIN{
         }
         else if(event == "r")
         {
-            totalRecieved++;
+            totalReceived++;
         }
         else if(event == "d")
         {
