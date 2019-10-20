@@ -62,7 +62,7 @@ set sink1 [new Agent/TCPSink]
 $ns attach-agent $n(3) $sink1
 $ns connect $tcp1 $sink1
 
-#Attach Telnet Application over TCP
+#Attach FTP Application over TCP
 set ftp [new Application/FTP]
 $ftp attach-agent $tcp1
 $ftp set type_ FTP
